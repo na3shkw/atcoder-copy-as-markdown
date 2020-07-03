@@ -56,7 +56,7 @@ function main() {
         }
     })
     for (const h3 of elem("h3")) {
-        if (["問題文", "制約"].indexOf(h3.textContent) > -1) {
+        if (["問題文", "制約", "入力", "出力"].indexOf(h3.textContent) > -1) {
             h3.insertAdjacentHTML(
                 "beforeend",
                 sprintf(
@@ -79,6 +79,7 @@ function main() {
                 );
                 let copyText = sourceHTML.match(pattern)[0].split("</section>")[0];
                 copyText = copyText
+                    .replace(/<\/var><var>/g, "$\n$")
                     .replace(/<\/?var>/g, "$")
                     .replace(/<li>/g, "* ")
                     .replace(/<\/li>|<\/p>/g, "\n")

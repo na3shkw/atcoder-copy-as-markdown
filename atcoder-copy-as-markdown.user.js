@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AtCoder Copy as Markdown
 // @namespace    https://github.com/na3shkw
-// @version      0.1
+// @version      0.2
 // @description  AtCoderの問題文や制約をMarkdownでコピーするユーザースクリプト
 // @author       @na3shkw
 // @match        https://atcoder.jp/contests/*
